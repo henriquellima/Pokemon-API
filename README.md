@@ -1,48 +1,52 @@
+
+
 # Pokemon-API #
-This aplication have two tables: users and pokemons. Each user will have you only list of pokemon.
+This aplication have two tables: users and pokemons. Each user will have its own list of pokemon.
 
 
 # At users you can:
-- Register, your password is totaly safe why this app save only the encrypted version of it -
+
+- Register - your password is totaly safe because this app only saves the encrypted version of it
   this function requires this JSON body:
   {
 	"nome": "user_name",
-	"email": "user_email@"
+	"email": "user_email@",
 	"senha": "user_password***"
   }
-  ----------------
-- Login, what gives you a token, you will need it to do changes in your pokemon list -
+  
+- Login - which gives you a token and you will need it to make changes in your pokemon list -
  this function requires this JSON body:
   {
-  "email": "user_email@"
-	"senha": "user_password**",
+  "email": "user_email@",
+  "senha": "user_password**"
   }
-  ----------------
   
   
-# At pokemons you can: ##(you need to pass your token in the baerer authentication)##
+# At pokemons you can: 
+## You need to pass your token in the baerer authentication ##
+
 - Register -
   this function requires this JSON body:
  {
-	"nome": "pokemon_name",
-	"habilidades": "pokemon_abillities",
-	"imagem": "pokemon_img_link" optional*,
+ "nome": "pokemon_name",
+ "habilidades": "pokemon_abillities",
+ "imagem": "pokemon_img_link" optional*,
   "apelido": "pokemon_nickname" optional
  }
 
- - List -
-    this function doesn't require body.
+- List -
+    this function doesn't require a body.
 
- - List by ID -
-    this function requires a pokemon_id in params.
+- List by ID -
+    this function requires a pokemon_id in parameters.
 
- - Updade Nickname -
-    this function requires a pokemon_id in params and JSON body:
+ - Update Nickname -
+    this function requires a pokemon_id in parameters and JSON body:
     {
     "apelido": "new_nickname"
     }
  
  - Delete Pokemon -
-  this function requires a pokemon_id in params.
+  this function requires a pokemon_id in parameters.
    
     
